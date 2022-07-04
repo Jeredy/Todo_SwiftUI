@@ -6,12 +6,14 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 @main
-struct Todo_SwiftUIApp: App {
+struct Todo_SwiftUIApp: SwiftUI.App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(\.realmConfiguration, Realm.Configuration( /* ... */ ))
         }
     }
 }
